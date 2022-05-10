@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+      layout:decorate="~{layouts/layout1}">
+
+<div layout:fragment="content">
+    <h1>회원가입</h1>
+    <form name="frm" th:action="@{/account/register}" th:method="post">
+        이메일 : <input type="text" name="email"><br>
+        암호 : <input type="password" name="password"><br>
+        이름 : <input type="text" name="name"><br>
+        주소 : <input type="text" name="address"><br>
+        <input type="submit" value="가입하기">
+    </form>
+</div>
+
+</html>

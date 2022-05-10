@@ -9,10 +9,10 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Getter
-@Table(name="shopItem")
-@Entity
 @NoArgsConstructor
 @ToString
+@Table(name="shopItem")
+@Entity
 public class Item {
 
     @Id

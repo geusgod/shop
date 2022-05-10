@@ -4,7 +4,7 @@
       layout:decorate="~{layouts/layout1}">
 
 <div layout:fragment="content">
-    안녕하세요~ 반갑습니다. ^^ 종스 입니다. 2
+    <h1>안녕하세요~ 반갑습니다. ^^ 종스 입니다. 3</h1>
     <p th:text="${data}"></p>
     <ul>
         <li><a th:href="@{/thymeleaf/ex01}">Thymeleaf 예제 01 model data 변수전달</a></li>
@@ -14,6 +14,10 @@
         <li><a th:href="@{/thymeleaf/ex05}">Thymeleaf 예제 05 th:switch, th:case</a></li>
         <li><a th:href="@{/thymeleaf/ex06(param1 = '파라메타 데이터1', param2 = '파라메타 데이터2')}">Thymeleaf 예제 06 th:herf 파라메타 전달</a></li>
         <li><a th:href="@{/thymeleaf/ex07(param1 = '파라메타 데이터1', param2 = '파라메타 데이터2')}">Thymeleaf 예제 07 layout:fragment 적용</a></li>
+    </ul>
+
+    <ul>
+        <li><a th:href="@{/exception/ex01}">Exception 예제 01</a></li>
     </ul>
 </div>
 
