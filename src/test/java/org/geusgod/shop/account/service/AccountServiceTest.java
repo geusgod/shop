@@ -1,37 +1,28 @@
 package org.geusgod.shop.account.service;
 
-import lombok.RequiredArgsConstructor;
 import org.geusgod.shop.account.constant.Role;
 import org.geusgod.shop.account.dto.AccountFormDto;
 import org.geusgod.shop.account.entity.Account;
-import org.geusgod.shop.account.repository.AccountRepository;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
 @Transactional
-@RequiredArgsConstructor
 //@TestPropertySource(locations = "classpath:application-test.properties")
 class AccountServiceTest {
 
-    private final AccountService accountService;
+    @Autowired
+    AccountService accountService;
 
-    private final PasswordEncoder passwordEncoder;
-
-    private final AccountRepository accountRepository;
-
-    @AfterEach
-    public void clearData() {
-        accountRepository.deleteAll();
-    }
+    @Autowired
+    PasswordEncoder passwordEncoder;
 
     public Account createMember() {
         AccountFormDto accountFormDto = new AccountFormDto();
